@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.2/paper-full.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="learninput.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #sidebar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+    }
+
+    #sidebar button {
+      width: 150px;
+    }
+
+    #paper {
+      transform-origin: top left;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="paper" resize height="250" width="250"></canvas>
+  <div id="sidebar" class="box buttons">
+    <button id="restart" class="button is-danger">
+      <span class="icon is-small">
+        <i class="fa fa-sync-alt"></i>
+      </span>
+      <span>Restart</span>
+    </button>
+
+    <button id="undo" class="button is-warning">
+      <span class="icon is-small">
+        <i class="fa fa-undo"></i>
+      </span>
+      <span>Undo</span>
+    </button>
+
+    <button id="save" class="button is-primary">
+      <span class="icon is-small">
+        <i class="fa fa-save"></i>
+      </span>
+      <span>Save</span>
+    </button>
+
+    <button id="previous" class="button is-secondary">
+      <span class="icon is-small">
+        <i class="fa fa-backward"></i>
+      </span>
+      <span>Previous</span>
+    </button>
+
+    <button id="next" class="button is-secondary">
+      <span class="icon is-small">
+        <i class="fa fa-forward"></i>
+      </span>
+      <span>Next</span>
+    </button>
+
+    <input id="opacity" class="is-fullwidth" step="0.1" min="0" max="1" value="0.5" type="range" orient="vertical">
+  </div>
+</body>
+</html>

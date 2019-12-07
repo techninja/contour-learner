@@ -1,0 +1,16 @@
+{
+  "name": "contour-learner",
+  "version": "1.0.0",
+  "description": "Learning contours, one at a time",
+  "main": "index.js",
+  "repository": "https://github.com/techninja/contour-learner",
+  "author": "techninja",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
