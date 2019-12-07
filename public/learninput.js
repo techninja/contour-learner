@@ -14,7 +14,6 @@ window.onload = function() {
 
   paper.settings.handleSize = 8
 
-
   // Create a simple drawing tool:
   const tool = new paper.Tool();
   let path = null; // Placeholder for the path.
@@ -24,7 +23,6 @@ window.onload = function() {
     path = new paper.Path({
       strokeWidth: 1,
       strokeColor: 'black',
-      fullySelected: true,
       pathData: data,
     });
     draw.addChild(path);
@@ -49,6 +47,7 @@ window.onload = function() {
 
   tool.onMouseUp = (event) => {
     path.simplify(2);
+    save();
   };
 
   tool.activate();
@@ -64,15 +63,6 @@ window.onload = function() {
       case 'restart':
         startLine();
         break;
-
-      case 'undo':
-
-        break;
-
-      case 'save':
-        save();
-        break;
-
 
       case 'next':
         fid = loadFID(fid + 1);
